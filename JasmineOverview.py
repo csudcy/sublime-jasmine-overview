@@ -6,8 +6,11 @@ import sublime_plugin
 class JasmineOverviewCommand(sublime_plugin.TextCommand):
     # To debug: view.run_command('jasmine_overview')
 
-    def run(self, edit):
-        self.locations = self.get_locations()
+    KEYWORD_RE = r'(describe|it)\w*\('
+    KEYWORD_WITH_BEFORE_AFTER_RE = r'(describe|beforeEach|afterEach|it)\w*\('
+
+    def run(self, edit, include_before_after=False):
+        self.locations = self.get_locations(include_before_after)
         self.original_selection = self.view.sel()
         print(self.original_selection)
         print(dir(self.original_selection))
@@ -17,10 +20,14 @@ class JasmineOverviewCommand(sublime_plugin.TextCommand):
             on_highlight=self.on_highlight
         )
 
-    def get_locations(self):
+    def get_locations(self, include_before_after):
         locations = []
 
-        keywords = self.view.find_all(r'(describe|beforeEach|afterEach|it)\w*\(')
+        if include_before_after:
+            keywords = self.view.find_all(self.KEYWORD_WITH_BEFORE_AFTER_RE)
+        else:
+            keywords = self.view.find_all(self.KEYWORD_RE)
+
         for keyword in keywords:
             region = self.view.line(keyword)
             name = self.view.substr(region)

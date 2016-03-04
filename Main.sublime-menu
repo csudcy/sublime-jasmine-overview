@@ -23,6 +23,11 @@
                             {
                                 "command": "jasmine_overview",
                                 "caption": "Show Jasmne Overview"
+                            },
+                            {
+                                "command": "jasmine_overview",
+                                "caption": "Show Full Jasmne Overview",
+                                "args": {"include_before_after": true}
                             }
                         ]
                     }
