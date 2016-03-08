@@ -6,7 +6,7 @@ A Sublime Text plugin to give an overview of Jasmine functions & their descripti
 
 The only default shortcut is `ctrl+k, ctrl+j` to show the Jasmine Overview quick panel (ignoring `beforeEach`/`afterEach`):
 
-`TODO: image`
+![Jasmine Overview](https://raw.githubusercontent.com/csudcy/sublime-jasmine-overview/master/jasmine-overview.png)
 
 If you want to include `beforeEach`/`afterEach`, you can add a shortcut like this:
 ```json
@@ -15,15 +15,6 @@ If you want to include `beforeEach`/`afterEach`, you can add a shortcut like thi
 
 You can also open the Jasmine Overview quick panel through the menu at `Preferences > Package Settings > Jasmine Overview`.
 
-
-## Todo
-
-* Improve readme
-  * Add images/gifs
-* Add tests
-  * Check `this.find_stub.withArgs('textarea.comment').returns({val: this.val_stub});` does not get found
-* Move menu entries out of preferences
-* Jump back to original cursor location if quick panel is cancelled
 
 ## Installing
 
@@ -39,3 +30,12 @@ If you are using [Sublime Package Control](http://wbond.net/sublime_packages/pac
 ### Download Manually
 
 You're going to have to work this out on your own (or, you know, just use package control...).
+
+
+## Todo
+
+* Add tests
+  * Check `this.find_stub.withArgs('textarea.comment').returns({val: this.val_stub});` does not get found
+* Add CI
+* Move menu entries out of preferences
+* Jump back to original cursor location if quick panel is cancelled
