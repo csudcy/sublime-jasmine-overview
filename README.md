@@ -1,6 +1,6 @@
 # Sublime Jasmine Overview
 
-A Sublime Text 3 plugin to give an overview of Jasmine functions
+A Sublime Text plugin to give an overview of Jasmine functions & their descriptions
 
 The default shortcut is `ctrl+k, ctrl+j` and `beforeEach`/`afterEach` are not shown.
 
@@ -13,10 +13,10 @@ These can also be accessed through the menu at `Preferences > Package Settings >
 
 ## Todo
 
-* [ ] Improve readme
-  * Better summary text
-  * Add images/gifs
-  * Add install instructions
+* Improve readme
+  * [ ] Better summary text
+  * [ ] Add images/gifs
+  * [ ] Add install instructions
 * [ ] Add tests
   * Check `this.find_stub.withArgs('textarea.comment').returns({val: this.val_stub});` does not get found
 * [ ] Move menu entries out of preferences
