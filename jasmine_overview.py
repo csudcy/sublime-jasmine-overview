@@ -9,7 +9,7 @@ class JasmineOverviewCommand(sublime_plugin.TextCommand):
         self.locations = self.get_locations(include_before_after)
         self.original_selection = self.view.sel()
         self.view.window().show_quick_panel(
-            self.get_symbol_names(),
+            self.get_location_names(),
             self.on_done,
             on_highlight=self.on_highlight
         )
@@ -41,10 +41,10 @@ class JasmineOverviewCommand(sublime_plugin.TextCommand):
 
         return locations
 
-    def get_symbol_names(self):
+    def get_location_names(self):
         return [
-            symbol['name']
-            for symbol in self.locations
+            location['name']
+            for location in self.locations
         ]
 
     def on_highlight(self, index):

@@ -32,6 +32,17 @@ If you are using [Sublime Package Control](http://wbond.net/sublime_packages/pac
 You're going to have to work this out on your own (or, you know, just use package control...).
 
 
+## Developing
+
+### Running tests
+
+To run the tests, execute:
+```bash
+pip install pytest
+py.test
+```
+
+
 ## Todo
 
 * Add tests
