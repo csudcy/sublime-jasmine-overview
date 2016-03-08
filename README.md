@@ -10,3 +10,14 @@ To show `beforeEach` and `afterEach` you can add a shortcut like this:
 ```
 
 These can also be accessed through the menu at `Preferences > Package Settings > Jasmine Overview`.
+
+## Todo
+
+* [ ] Improve readme
+  * Better summary text
+  * Add images/gifs
+  * Add install instructions
+* [ ] Add tests
+  * Check `this.find_stub.withArgs('textarea.comment').returns({val: this.val_stub});` does not get found
+* [ ] Move menu entries out of preferences
+* [ ] Jump back to original cursor location if quick panel is cancelled
