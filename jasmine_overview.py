@@ -7,7 +7,7 @@ class JasmineOverviewCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, include_before_after=False):
         self.locations = self.get_locations(include_before_after)
-        self.original_selection = self.view.sel()
+        self.original_selections = [s for s in self.view.sel()]
         self.view.window().show_quick_panel(
             self.get_location_names(),
             self.on_done,
@@ -61,5 +61,9 @@ class JasmineOverviewCommand(sublime_plugin.TextCommand):
     def on_done(self, index):
         # Check if the quick panel was cancelled
         if index == -1:
-            # TODO: Reset to original_selection
-            pass
+            # Select all the originally selected regions
+            self.view.sel().clear()
+            self.view.sel().add_all(self.original_selections)
+
+            # Center on the first selection
+            self.view.show_at_center(self.original_selections[0])
