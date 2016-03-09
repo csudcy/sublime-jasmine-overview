@@ -1,38 +1,31 @@
 [
     {
-        "caption": "Preferences",
-        "mnemonic": "n",
-        "id": "preferences",
+        "caption": "Tools",
+        "mnemonic": "t",
+        "id": "tools",
         "children":
         [
             {
-                "caption": "Package Settings",
-                "mnemonic": "P",
-                "id": "package-settings",
+                "caption": "Jasmine Overview",
                 "children":
                 [
                     {
-                        "caption": "Jasmine Overview",
-                        "children":
-                        [
-                            {
-                                "command": "open_file",
-                                "args": {"file": "${packages}/sublime-jasmine-overview/Default.sublime-keymap"},
-                                "caption": "Keymap – Default"
-                            },
-                            {
-                                "command": "jasmine_overview",
-                                "caption": "Show Jasmne Overview"
-                            },
-                            {
-                                "command": "jasmine_overview",
-                                "caption": "Show Full Jasmne Overview",
-                                "args": {"include_before_after": true}
-                            }
-                        ]
+                        "command": "open_file",
+                        "args": {"file": "${packages}/sublime-jasmine-overview/Default.sublime-keymap"},
+                        "caption": "Keymap – Default"
+                    },
+                    {
+                        "command": "jasmine_overview",
+                        "caption": "Show Jasmne Overview"
+                    },
+                    {
+                        "command": "jasmine_overview",
+                        "caption": "Show Full Jasmne Overview",
+                        "args": {"include_before_after": true}
                     }
                 ]
             }
         ]
     }
+
 ]

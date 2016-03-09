@@ -13,7 +13,7 @@ If you want to include `beforeEach`/`afterEach`, you can add a shortcut like thi
     { "keys": ["ctrl+k", "ctrl+j"], "command": "jasmine_overview", "args": {"include_before_after": true} }
 ```
 
-You can also open the Jasmine Overview quick panel through the menu at `Preferences > Package Settings > Jasmine Overview`.
+You can also open the Jasmine Overview quick panel through the menu at `Tools > Jasmine Overview`.
 
 
 ## Installing
@@ -45,8 +45,5 @@ py.test
 
 ## Todo
 
-* Add tests
-  * Check `this.find_stub.withArgs('textarea.comment').returns({val: this.val_stub});` does not get found
 * Add CI
-* Move menu entries out of preferences
 * Jump back to original cursor location if quick panel is cancelled
