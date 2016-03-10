@@ -55,6 +55,7 @@ def test_keyword_with_before_after_re_matches(code):
         'beforeEach(function() {',
         'afterEach(function() {',
         'this.find_stub.withArgs("textarea.comment").returns({val: this.val_stub});',
+        'this.view.init(this.my_campaign);',
         'Just a sentence with the word describe in',
         'Just a sentence with the word it in',
         'Just a sentence with the word xdescribe in',
@@ -69,6 +70,7 @@ def test_keyword_re_does_not_match(code):
     'code',
     (
         'this.find_stub.withArgs("textarea.comment").returns({val: this.val_stub});',
+        'this.view.init(this.my_campaign);',
         'Just a sentence with the word describe in',
         'Just a sentence with the word it in',
         'Just a sentence with the word xdescribe in',

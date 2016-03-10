@@ -55,4 +55,6 @@ py.test
 
 ## Todo
 
+* Allow exact list of keywords to be specified
+  * Update tests
 * Add CI

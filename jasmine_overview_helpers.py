@@ -1,7 +1,10 @@
 import re
 
-KEYWORD_RE = r'(describe|it)\s*\('
-KEYWORD_WITH_BEFORE_AFTER_RE = r'(describe|beforeEach|afterEach|it)\s*\('
+def make_re(*keywords):
+    return r'^\s*(' + '|'.join(keywords) + r')\s*\('
+
+KEYWORD_RE = make_re('describe', 'xdescribe', 'it', 'xit')
+KEYWORD_WITH_BEFORE_AFTER_RE = make_re('describe', 'xdescribe', 'it', 'xit', 'beforeEach', 'afterEach')
 
 
 def get_name(code):
