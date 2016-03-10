@@ -163,6 +163,18 @@ def test_keyword_with_before_after_re_does_not_match(code):
             '    afterEach ( function ( )  { # Commenty McComment',
             '    afterEach',
         ),
+
+        # Brackets in the description
+        (
+            'describe("given on_complete() is called", function(){',
+            'describe: "given on_complete() is called"'
+        ),
+
+        # Function in the description
+        (
+            'describe("given the function() is called", function(){',
+            'describe: "given the function() is called"'
+        ),
     )
 )
 def test_get_name_extracts_correct_name(code, expected_name):

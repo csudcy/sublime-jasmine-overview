@@ -22,7 +22,8 @@ def get_name(code):
         name = re.sub(
             r'\s*\(\s*',
             ': ',
-            name
+            name,
+            1 # Only replace the first occurrence
         )
     name = name.rstrip()
 
